@@ -1,18 +1,29 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-    Layout = null;
+﻿@{
+    ViewBag.Title = "Home Page";
 }
 
-<html>
-<head></head>
+<div class="jumbotron">
+    <h1>Receitas MasterChef</h1>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <h2>Bem vindo ao site de receitas MasterChef</h2>
+        <p>
+            Receitas MasterChef é um trabalho da Disciplina Desenvolvimento Web
+            da Fiap e serve para nós alunos, colocar em prática o que está sendo visto em aula.
+        </p>
+    </div>
+    <div class="col-md-4">
+        <h2>Receitas</h2>
+        <p>Pesquise aqui as receitas disponíveis no site.</p>
+        @*<p><a class="btn btn-default" href="http://www.tudogostoso.com.br/">Receitas &raquo;</a></p>*@
 
-<body>
-
-    <h1>Receitas by MasterChef!</h1>
-
-</body>
+        <ul>
+        <li> @Html.ActionLink("Receitas", "Index", "Receita") &raquo;</li>
+        </ul>
 
 
-</html>
+        @*@Html.ActionLink("Link text", "action", "controller")*@
+
+    </div>
+</div>
