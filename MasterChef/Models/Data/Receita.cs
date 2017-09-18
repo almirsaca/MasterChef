@@ -2,9 +2,8 @@
 
 namespace MasterChef.Models.Data
 {
-    public class Receitas
+    public class Receita
     {
-        [Key]
         public int ReceitaID { get; set; }
         public int ReceitaCategoriaID { get; set; }
         public int ReceitaAutorID { get; set; }

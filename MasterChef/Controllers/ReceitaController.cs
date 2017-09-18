@@ -16,12 +16,12 @@ namespace MasterChef.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            return View(db.Receitas.ToList());
+            return View(db.Receita.ToList());
         }
 
         public IActionResult Details(int id = 0)
         {
-            var receita = db.Receitas.Find(id);
+            var receita = db.Receita.Find(id);
             return View(receita);
         }
     }

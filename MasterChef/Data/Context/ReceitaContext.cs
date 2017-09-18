@@ -8,17 +8,17 @@ namespace MasterChef.Data.Context
         #region Inicializacao
 
         public ReceitaContext(string connString) : base(new DbContextOptionsBuilder<ReceitaContext>()
-        .UseSqlServer(connString).Options)
+        .UseSqlServer(@"Server=(localdb)\MSSQLLocalDB;Database=MasterChef;Trusted_Connection=True;MultipleActiveResultSets=true").Options)
         { }
 
         #endregion // Inicializacao
 
         #region DbSets
 
-        public DbSet<Receitas> Receitas { get; set; }
+        public DbSet<Receita> Receita { get; set; }
         public DbSet<ReceitaCategoria> ReceitaCategoria { get; set; }
         public DbSet<ReceitaAutor> ReceitaAutor { get; set; }
-        public DbSet<ReceitaIngredientes> ReceitaIngredientes { get; set; }
+        public DbSet<ReceitaIngrediente> ReceitaIngredientes { get; set; }
         public DbSet<ReceitaPrepraro> ReceitaPrepraro { get; set; }
         
 
@@ -26,9 +26,9 @@ namespace MasterChef.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Receitas>().ToTable("Receitas");
+            modelBuilder.Entity<Receita>().ToTable("Receita");
             modelBuilder.Entity<ReceitaCategoria>().ToTable("ReceitaCategoria");
-            modelBuilder.Entity<ReceitaIngredientes>().ToTable("ReceitaIngredientes");
+            modelBuilder.Entity<ReceitaIngrediente>().ToTable("ReceitaIngrediente");
             modelBuilder.Entity<ReceitaPrepraro>().ToTable("ReceitaPrepraro");
             modelBuilder.Entity<ReceitaAutor>().ToTable("ReceitaAutor");
         }
