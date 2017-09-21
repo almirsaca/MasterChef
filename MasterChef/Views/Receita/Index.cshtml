@@ -1,4 +1,4 @@
-﻿@model List<MasterChef.Models.Data.Receita>
+﻿@model IEnumerable<MasterChef.Models.Data.Receita>
 @{
     ViewBag.Title = "Index";
 }
@@ -25,9 +25,9 @@
     @foreach (var item in @Model)
     {
         <tr>
-            <td>
+            @*<td>
                 @Html.DisplayFor(modelItem => item.ReceitaID)
-            </td>
+            </td>*@
             <td>
                 @Html.DisplayFor(modelItem => item.ReceitaCategoriaID)
             </td>
@@ -37,9 +37,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Titulo)
             </td>
-            <td>
+            @*<td>
                 @Html.ActionLink("Details", "Details", new { id = item.ReceitaID }) |
-            </td>
+            </td>*@
         </tr>
     }
 </table>

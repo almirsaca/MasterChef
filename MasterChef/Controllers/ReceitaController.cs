@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using MasterChef.Data.Context;
-using MasterChef.Models.Data;
+﻿using Microsoft.AspNetCore.Mvc;
+using MasterChef.Models;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
@@ -12,25 +7,24 @@ namespace MasterChef.Controllers
 {
     public class ReceitaController : Controller
     {
-        private readonly ReceitaContext db = new ReceitaContext("conn");
+        private readonly IReceitaServices _receitaServices;
+
+        public ReceitaController(IReceitaServices receitaServices)
+        {
+            _receitaServices = receitaServices;
+        }
 
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var retorno = new List<Receita>();
-            for (int i = 0; i < 10; i++)
-            {
-                var m = new Receita { ReceitaID = i, Titulo  = $"Titulo {i}" };
-                retorno.Add(m);
-            }
-            // return View(db.Receita.ToList());
+            var retorno = _receitaServices.Listar();
             return View(retorno);
         }
 
         public IActionResult Details(int id = 0)
         {
-            var receita = db.Receita.Find(id);
-            return View(receita);
+            var retorno = _receitaServices.Pesquisar(id);
+            return View(retorno);
         }
     }
 }

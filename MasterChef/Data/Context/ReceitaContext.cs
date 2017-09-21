@@ -1,4 +1,5 @@
-﻿using MasterChef.Models.Data;
+﻿using MasterChef.Data.Mapping;
+using MasterChef.Models.Data;
 using Microsoft.EntityFrameworkCore;
 
 namespace MasterChef.Data.Context
@@ -26,6 +27,9 @@ namespace MasterChef.Data.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            AutorMap.OnCreateTable(ref modelBuilder);
+            CategoriaMap.OnCreateTable(ref modelBuilder);
+            
             modelBuilder.Entity<Receita>().ToTable("Receita");
             modelBuilder.Entity<ReceitaCategoria>().ToTable("ReceitaCategoria");
             modelBuilder.Entity<ReceitaIngrediente>().ToTable("ReceitaIngrediente");
