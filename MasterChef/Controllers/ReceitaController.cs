@@ -17,13 +17,13 @@ namespace MasterChef.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var retorno = _receitaServices.Listar();
+            var retorno = _receitaServices.ListaReceita();
             return View(retorno);
         }
 
         public IActionResult Details(int id = 0)
         {
-            var retorno = _receitaServices.Pesquisar(id);
+            var retorno = _receitaServices.PesquisaReceitaAsync(id);
             return View(retorno);
         }
     }

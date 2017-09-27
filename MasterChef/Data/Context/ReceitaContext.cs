@@ -19,7 +19,7 @@ namespace MasterChef.Data.Context
         public DbSet<Receita> Receita { get; set; }
         public DbSet<ReceitaCategoria> ReceitaCategoria { get; set; }
         public DbSet<ReceitaAutor> ReceitaAutor { get; set; }
-        public DbSet<ReceitaIngrediente> ReceitaIngredientes { get; set; }
+        public DbSet<ReceitaIngrediente> ReceitaIngrediente { get; set; }
         public DbSet<ReceitaPrepraro> ReceitaPrepraro { get; set; }
         
 
