@@ -16,10 +16,12 @@ namespace MasterChef.Domain.Entities
         public ReceitaCategoria ReceitaCategoria { get; set; }
         public ReceitaAutor ReceitaAutor { get; set; }
 
+
         protected Receita()
         {
 
         }
+        
 
         public Receita(int receitaId, int categoriaId, int autorId, string titulo)
         {

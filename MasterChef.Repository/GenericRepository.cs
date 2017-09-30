@@ -66,6 +66,7 @@ namespace MasterChef.Repository
         public IPaginatedList<TEntity> GetPaginated(IQueryable<TEntity> source, int pageIndex, int pageSize)
         {
             var count = source.Count();
+
             var items = source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
 
             return new PaginatedList<TEntity>(items, count, pageIndex, pageSize);
