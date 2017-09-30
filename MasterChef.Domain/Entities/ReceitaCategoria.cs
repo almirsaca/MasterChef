@@ -10,6 +10,7 @@ namespace MasterChef.Domain.Entities
     {
         public int ReceitaCategoriaID { get; set; }
         public string Descricao { get; set; }
+
         public IEnumerable<Receita> Receitas { get; set; }
 
         protected ReceitaCategoria()

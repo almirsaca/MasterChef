@@ -68,7 +68,6 @@ namespace MasterChef.Repository
             var count = source.Count();
 
             var items = source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
-
             return new PaginatedList<TEntity>(items, count, pageIndex, pageSize);
         }
     }
