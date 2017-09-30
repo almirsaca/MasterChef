@@ -13,6 +13,12 @@ namespace MasterChef.Domain.Entities
         public int ReceitaCategoriaID { get; set; }
         public string Descricao { get; set; }
         public DateTime DataCadastro { get; set; }
+
         public IEnumerable<Receita> Receitas { get; set; }
+
+        public ReceitaCategoria() { }
+
+        public ReceitaCategoria(int receitaCategoriaID, string descricao, DateTime DataCadastro) { }
+
     }
 }

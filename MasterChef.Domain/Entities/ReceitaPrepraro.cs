@@ -9,8 +9,11 @@ namespace MasterChef.Domain.Entities
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ReceitaPrepraroID { get; set; }
+        [ForeignKey("Receita")]
         public int ReceitaID { get; set; }
         public string ModoPreparo { get; set; }
- 
+
+        public ReceitaPrepraro() { }
+
     }
 }

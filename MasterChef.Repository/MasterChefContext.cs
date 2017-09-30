@@ -27,6 +27,8 @@ namespace MasterChef.Repository
             ReceitaMap.OnCreateTable(ref modelBuilder);
             ReceitaAutorMap.OnCreateTable(ref modelBuilder);
             ReceitaCategoriaMap.OnCreateTable(ref modelBuilder);
+            ReceitaPrepraroMap.OnCreateTable(ref modelBuilder);
+            ReceitaIngredienteMap.OnCreateTable(ref modelBuilder);
 
             foreach (var relationship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys()))
             {
@@ -38,7 +40,7 @@ namespace MasterChef.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=.\SqlExpress;Initial Catalog=MasterChef;Integrated Security=True;Language=portuguese;");
+            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MasterChef;Integrated Security=True;Language=portuguese;");
         }
     }
 }
