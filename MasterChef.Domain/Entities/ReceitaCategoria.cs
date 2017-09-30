@@ -8,11 +8,16 @@ namespace MasterChef.Domain.Entities
 {
     public class ReceitaCategoria : EntityBase
     {
-        [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+      
         public int ReceitaCategoriaID { get; set; }
         public string Descricao { get; set; }
         public DateTime DataCadastro { get; set; }
         public IEnumerable<Receita> Receitas { get; set; }
+
+
+        protected ReceitaCategoria()
+        {
+
+        }
     }
 }

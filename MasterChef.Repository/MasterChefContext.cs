@@ -16,6 +16,7 @@ namespace MasterChef.Repository
             this.Database.EnsureCreated();
         }
 
+        private DbSet<Usuario> Usuario { get; set; }
         private DbSet<Receita> Receita { get; set; }
         private DbSet<ReceitaAutor> ReceitaAutor { get; set; }
         private DbSet<ReceitaCategoria> ReceitaCategoria { get; set; }

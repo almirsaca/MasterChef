@@ -1,7 +1,8 @@
 ﻿using MasterChef.Api.ViewModel;
-using MasterChef.Application.Interfaces;
+using MasterChef.Domain;
+using MasterChef.Domain.Application;
 using MasterChef.Domain.Entities;
-using MasterChef.Domains;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 namespace MasterChef.Api.Controllers
 {
     [Route("api/[controller]")]
-    public class ReceitaController : Controller
+    public class ReceitaController : ControllerBase
     {
         private readonly IReceitaService ReceitaService;
 

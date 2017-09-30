@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MasterChef.Domains
+namespace MasterChef.Domain
 {
     public interface IPaginatedList<TEntity> : IList<TEntity>
     {

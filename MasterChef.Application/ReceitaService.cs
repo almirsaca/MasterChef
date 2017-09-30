@@ -1,8 +1,8 @@
-﻿using MasterChef.Application.Interfaces;
-using MasterChef.Domain;
+﻿using MasterChef.Domain;
+using MasterChef.Domain.Application;
 using MasterChef.Domain.Entities;
 using MasterChef.Domain.Interfaces;
-using MasterChef.Domains;
+using MasterChef.Domain.Repository;
 using System;
 using System.Linq;
 

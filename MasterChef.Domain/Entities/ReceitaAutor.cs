@@ -12,5 +12,11 @@ namespace MasterChef.Domain.Entities
         public int ReceitaAutorID { get; set; }
         public string Nome { get; set; }
         public IEnumerable<Receita> Receitas { get; set; }
+
+
+        protected ReceitaAutor()
+        {
+
+        }
     }
 }

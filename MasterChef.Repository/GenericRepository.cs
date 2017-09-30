@@ -5,7 +5,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using MasterChef.Domains;
 
 namespace MasterChef.Repository
 {
@@ -68,9 +67,9 @@ namespace MasterChef.Repository
         {
             var count = source.Count();
             var items = source.Skip((pageIndex - 1) * pageSize).Take(pageSize).ToList();
+
             return new PaginatedList<TEntity>(items, count, pageIndex, pageSize);
         }
-
     }
 }
 
