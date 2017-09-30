@@ -1,9 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26730.12
+VisualStudioVersion = 15.0.26730.10
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef", "MasterChef\MasterChef.csproj", "{833A8846-F05A-41DE-96DA-8CFCCB99B4F6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Repository", "MasterChef.Repository\MasterChef.Repository.csproj", "{7CD83958-F0DF-41D6-A3F2-FD7E5683DAA5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Domain", "MasterChef.Domain\MasterChef.Domain.csproj", "{B9FE70DF-084B-4417-918C-252A9DF177A2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Infra", "MasterChef.Infra\MasterChef.Infra.csproj", "{A6A9F239-EE8E-48F1-A63C-0F3F4BF6754D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Api", "MasterChef.Api\MasterChef.Api.csproj", "{D4B166E2-CECE-469C-98A0-8331C306D7D5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.FrontEnd", "MasterChef.FrontEnd\MasterChef.FrontEnd.csproj", "{680CED7E-F610-4369-9D24-7C4BC20D05F6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MasterChef.Application", "MasterChef.Application\MasterChef.Application.csproj", "{B8419FB5-4D80-4744-8402-1F8BD57A3891}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +21,30 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{833A8846-F05A-41DE-96DA-8CFCCB99B4F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{833A8846-F05A-41DE-96DA-8CFCCB99B4F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{833A8846-F05A-41DE-96DA-8CFCCB99B4F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{833A8846-F05A-41DE-96DA-8CFCCB99B4F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CD83958-F0DF-41D6-A3F2-FD7E5683DAA5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CD83958-F0DF-41D6-A3F2-FD7E5683DAA5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CD83958-F0DF-41D6-A3F2-FD7E5683DAA5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CD83958-F0DF-41D6-A3F2-FD7E5683DAA5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9FE70DF-084B-4417-918C-252A9DF177A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9FE70DF-084B-4417-918C-252A9DF177A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9FE70DF-084B-4417-918C-252A9DF177A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9FE70DF-084B-4417-918C-252A9DF177A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A6A9F239-EE8E-48F1-A63C-0F3F4BF6754D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6A9F239-EE8E-48F1-A63C-0F3F4BF6754D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6A9F239-EE8E-48F1-A63C-0F3F4BF6754D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6A9F239-EE8E-48F1-A63C-0F3F4BF6754D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4B166E2-CECE-469C-98A0-8331C306D7D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4B166E2-CECE-469C-98A0-8331C306D7D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4B166E2-CECE-469C-98A0-8331C306D7D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4B166E2-CECE-469C-98A0-8331C306D7D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{680CED7E-F610-4369-9D24-7C4BC20D05F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{680CED7E-F610-4369-9D24-7C4BC20D05F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{680CED7E-F610-4369-9D24-7C4BC20D05F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{680CED7E-F610-4369-9D24-7C4BC20D05F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B8419FB5-4D80-4744-8402-1F8BD57A3891}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8419FB5-4D80-4744-8402-1F8BD57A3891}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8419FB5-4D80-4744-8402-1F8BD57A3891}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8419FB5-4D80-4744-8402-1F8BD57A3891}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
