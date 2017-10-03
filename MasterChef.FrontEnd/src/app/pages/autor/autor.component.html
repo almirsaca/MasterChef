@@ -29,7 +29,7 @@
                 <button type="submit" class="btn btn-success pull-left">Pesquisar</button>
               </div>
               <div class="col-lg-6">
-                <button type="submit" class="btn btn-primary pull-right">Novo</button>
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModalLong">Novo</button>
               </div>
             </div>
           </form>
@@ -59,11 +59,11 @@
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="text-center">1</td>
-                <td> Security doors
+              <tr *ngFor='let a of autores; trackBy: index;'>>
+                <td class="text-center">{{a.AutorId}}</td>
+                <td> {{a.Nome}}
                 </td>
-                <td class="text-center small">16 Jun 2014</td>
+                <td class="text-center small">{{a.DataCadastro}}</td>
               </tr>
             </tbody>
           </table>
@@ -72,4 +72,6 @@
       </div>
     </div>
   </div>
+
+
 </div>

@@ -1,5 +1,8 @@
 import { Component, OnInit  } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {Http, Response, RequestOptions, Headers} from '@angular/http';
+import { Autor} from "../../models/autor";
+
+
 
 @Component({
     selector: 'app-autor',
@@ -7,16 +10,16 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AutorComponent implements OnInit {
    
+    autores: Autor[];
    
-    autores: string[];
-   
-    constructor(private http: HttpClient) { }
+    constructor(private http: Http) { }
 
     ngOnInit() {
 
-        this.http.get('/api/items').subscribe(data => {
+        this.http.get('http://localhost:58877/api/Autor').subscribe(data => {
             this.autores = data['results'];
         });
 
     }
+
 }

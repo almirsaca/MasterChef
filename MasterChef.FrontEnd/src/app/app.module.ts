@@ -12,7 +12,6 @@ import {HomeComponent} from "./pages/home/home.component";
 import {loginComponent} from "./pages/login/login.component";
 import {AutorComponent} from "./pages/autor/autor.component";
 
-import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import {HttpClientModule} from '@angular/common/http';
     Topnavbar,
     HomeComponent,
     loginComponent,
-    AutorComponent,
-    HttpClientModule
+    AutorComponent
   ],
   imports: [
     BrowserModule,

@@ -22,6 +22,9 @@ namespace MasterChef.Api.Controllers
 
         }
 
+
+
+
         [HttpGet]
         public IPaginatedList<Receita> Get(int page = 1, int size = 20)
         {
