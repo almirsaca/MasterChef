@@ -5,14 +5,14 @@
                 <div class="dropdown profile-element">
                     <span>
                         <img alt="image" class="img-circle" width="80px"
-                             src="./assets/img/avatar/{{loginInfo.avatar}}" />
+                             src="https://www.tm-town.com/assets/default_male300x300-aae6ae0235b6cd78cee8df7ae19f6085.png" />
                     </span>
                     <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                       <span class="clear">
                           <span class="block m-t-xs">
-                          <strong class="font-bold">{{loginInfo.first_name}} {{loginInfo.last_name}}</strong>
+                          <strong class="font-bold">{{loginInfo.Nome}}</strong>
                       </span>
-                          <span class="text-muted text-xs block">{{loginInfo.title}}</span>
+                          <span class="text-muted text-xs block">{{loginInfo.Email}}</span>
                       </span>
                     </a>
                 </div>
@@ -28,6 +28,9 @@
             </li>
             <li [ngClass]="{active: activeRoute('autor')}">
                 <a [routerLink]="['./autor']"><i class="fa fa-desktop"></i> <span class="nav-label">Autor</span></a>
+            </li>
+            <li [ngClass]="{active: activeRoute('usuario')}">
+                <a [routerLink]="['./usuario']"><i class="fa fa-desktop"></i> <span class="nav-label">Usuário</span></a>
             </li>
         </ul>
 
