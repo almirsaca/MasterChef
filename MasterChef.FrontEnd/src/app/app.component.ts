@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {Login} from "./models/login";
+
 
 @Component({
   selector: 'app-root',
@@ -7,8 +7,5 @@ import {Login} from "./models/login";
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  loginInfo:Login = {
-      Email:'Andrew',
-      Senha:'Yang'
-  };
+
 }

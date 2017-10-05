@@ -4,7 +4,7 @@ import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import {AutorComponent} from "./autor.component";
 import {AutorRoutes} from "./autor.routes";
-import {Autor} from "../models/autor";
+
 
 @NgModule({
   imports: [

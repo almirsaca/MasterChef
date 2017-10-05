@@ -1,6 +1,7 @@
 import {HomeComponent} from "./pages/home/home.component";
 import {loginComponent} from "./pages/login/login.component";
-import {AutorComponent} from "./pages/autor/autor.component";
+import { AutorComponent } from "./pages/autor/autor.component";
+import { UsuarioComponent } from "./pages/usuario/usuario.component";
 
 export const appRoutes=[
     {
@@ -24,4 +25,8 @@ export const appRoutes=[
         path: 'autor',
         component: AutorComponent
     },
+    {
+        path: 'usuario',
+        component: UsuarioComponent
+    }
 ];

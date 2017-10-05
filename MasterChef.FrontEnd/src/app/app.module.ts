@@ -11,6 +11,7 @@ import {appRoutes} from "./app.routes";
 import {HomeComponent} from "./pages/home/home.component";
 import {loginComponent} from "./pages/login/login.component";
 import {AutorComponent} from "./pages/autor/autor.component";
+import {UsuarioComponent} from "./pages/usuario/usuario.component";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import {AutorComponent} from "./pages/autor/autor.component";
     Topnavbar,
     HomeComponent,
     loginComponent,
-    AutorComponent
+    AutorComponent,
+    UsuarioComponent
   ],
   imports: [
     BrowserModule,
