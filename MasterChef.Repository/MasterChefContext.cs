@@ -41,7 +41,7 @@ namespace MasterChef.Repository
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=MasterChef;Integrated Security=True;Language=portuguese;");
+            optionsBuilder.UseSqlServer(@"Data Source=.\SqlExpress;Initial Catalog=MasterChef;Integrated Security=True;Language=portuguese;");
         }
     }
 }

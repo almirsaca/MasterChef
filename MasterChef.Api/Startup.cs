@@ -72,8 +72,15 @@ namespace MasterChef.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCors(builder => builder.AllowAnyOrigin()
+               .AllowAnyHeader()
+               .AllowAnyMethod()
+               .AllowCredentials());
+
             app.UseAuthentication();
             app.UseMvc();
+
+
 
         }
     }

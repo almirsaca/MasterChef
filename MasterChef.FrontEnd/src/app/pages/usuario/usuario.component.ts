@@ -16,7 +16,12 @@ export class UsuarioComponent implements OnInit {
 
     ngOnInit() {
 
-        this.http.get('http://localhost:58877/api/Usuario').subscribe(data => {
+        var usuarioLogado = JSON.parse(localStorage.getItem("UsuarioLogado") || "{}");
+        
+        let headers = new Headers({ 'Authorization': 'Bearer ' + usuarioLogado.Token });
+        let options = new RequestOptions({ headers: headers });
+
+        this.http.get('http://localhost:58877/api/Usuario',options).subscribe(data => {
             this.usuarios = data['results'];
         });
 
