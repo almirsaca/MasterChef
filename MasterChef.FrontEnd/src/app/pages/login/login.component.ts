@@ -1,47 +1,32 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {
-  Http,
-  Response,
-  RequestOptions,
-  Headers,
-  URLSearchParams
-} from '@angular/http';
-import {
-  Login
-} from "../../models/login";
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { AuthenticationService } from '../../services/authenticationService';
 
 
 @Component({
-  selector: 'app-login',
-  templateUrl: './login.component.html',
+    selector: 'app-login',
+    templateUrl: './login.component.html',
 })
-export class loginComponent implements OnInit {
-  constructor(private http: Http) {}
+export class LoginComponent implements OnInit {
+    constructor(
+        private router: Router,
+        private authenticationService: AuthenticationService) { }
 
-  model: any = {};
+    model: any = {};
+    loading = false;
+    error = '';
 
-  ngOnInit() {}
+    ngOnInit() { }
 
-  autenticar() {
-
-    console.log(this.model);
-
-    let data = new URLSearchParams();
-    data.append('email', this.model.Email);
-    data.append('password', this.model.Senha);
-
-    this.http
-      .post('http://localhost:58877/token', data)
-      .subscribe(data => {      
-
-        var item = data.json();
-
-        localStorage.setItem('usuarioLogado',  JSON.stringify(item));
-      }, error => {
-        console.log(error.json());
-      });
-  }
+    autenticar() {
+        this.loading = true;
+        this.authenticationService.login(this.model.Email, this.model.Senha).subscribe(() => {
+            this.router.navigate(['/']);
+        },
+            err => {
+                console.log(err);
+                this.error = 'Usuário e/ou senha incorretos';
+                this.loading = false;
+            });
+    }
 }
