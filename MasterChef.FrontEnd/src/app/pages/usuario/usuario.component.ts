@@ -1,7 +1,6 @@
-import { Component, OnInit  } from '@angular/core';
-import {Http, Response, RequestOptions, Headers} from '@angular/http';
-import { Usuario} from "../../models/usuario";
-
+import { Injectable,Component, OnInit } from '@angular/core';
+import { Usuario } from "../../models/usuario";
+import { UsuarioService } from '../../services/usuarioService';
 
 
 @Component({
@@ -9,21 +8,15 @@ import { Usuario} from "../../models/usuario";
     templateUrl: './usuario.component.html',
 })
 export class UsuarioComponent implements OnInit {
-   
+
     usuarios: Usuario[];
-   
-    constructor(private http: Http) { }
+
+    constructor(private UsuarioService: UsuarioService) { }
 
     ngOnInit() {
 
-        var usuarioLogado = JSON.parse(localStorage.getItem("UsuarioLogado") || "{}");
-        
-        let headers = new Headers({ 'Authorization': 'Bearer ' + usuarioLogado.Token });
-        let options = new RequestOptions({ headers: headers });
-
-        this.http.get('http://localhost:58877/api/Usuario',options).subscribe(data => {
-            this.usuarios = data['results'];
+        this.UsuarioService.get('Usuario').subscribe(result => {
+            this.usuarios = result.data;
         });
-
     }
 }

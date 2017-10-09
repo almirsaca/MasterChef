@@ -1,13 +1,13 @@
-import {HomeComponent} from "./pages/home/home.component";
-import {loginComponent} from "./pages/login/login.component";
+import { HomeComponent } from "./pages/home/home.component";
+import { LoginComponent } from "./pages/login/login.component";
 import { AutorComponent } from "./pages/autor/autor.component";
 import { UsuarioComponent } from "./pages/usuario/usuario.component";
 
-export const appRoutes=[
+export const appRoutes = [
     {
-        path:'',
-        redirectTo:'home',
-        pathMatch:'full'
+        path: '',
+        redirectTo: 'home',
+        pathMatch: 'full'
     },
     {
         path: 'home',
@@ -15,11 +15,11 @@ export const appRoutes=[
     },
     {
         path: 'others',
-        loadChildren:'./pages/others/others.module#OthersModule',
+        loadChildren: './pages/others/others.module#OthersModule',
     },
     {
         path: 'login',
-        component: loginComponent
+        component: LoginComponent
     },
     {
         path: 'autor',

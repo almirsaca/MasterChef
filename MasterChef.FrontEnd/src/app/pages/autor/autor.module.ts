@@ -1,19 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {RouterModule} from "@angular/router";
-import {FormsModule} from "@angular/forms";
-import {AutorComponent} from "./autor.component";
-import {AutorRoutes} from "./autor.routes";
+import { RouterModule } from "@angular/router";
+import { FormsModule } from "@angular/forms";
+import { AutorComponent } from "./autor.component";
+import { AutorRoutes } from "./autor.routes";
 
 
 @NgModule({
-  imports: [
-      CommonModule,
-      FormsModule,
-      RouterModule.forChild(AutorRoutes)
-  ],
-  declarations: [
-      AutorComponent
-  ],
+    imports: [
+        CommonModule,
+        FormsModule,
+        RouterModule.forChild(AutorRoutes)
+    ],
+    declarations: [
+        AutorComponent
+    ],
 })
 export class OthersModule { }
