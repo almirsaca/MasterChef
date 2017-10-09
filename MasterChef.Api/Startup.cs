@@ -44,6 +44,7 @@ namespace MasterChef.Api
             services.Add(ServiceDescriptor.Scoped(typeof(IUsuarioRepository), typeof(UsuarioRepository)));
             services.Add(ServiceDescriptor.Scoped(typeof(IReceitaService), typeof(ReceitaService)));
             services.Add(ServiceDescriptor.Scoped(typeof(IUsuarioService), typeof(UsuarioService)));
+            services.Add(ServiceDescriptor.Scoped(typeof(ICategoriaService), typeof(ReceitaCategoriaService)));
 
             services.AddAuthentication(options =>
             {
