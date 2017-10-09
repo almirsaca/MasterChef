@@ -18,6 +18,7 @@ using MasterChef.Domain.Application;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using MasterChef.Repository.Repository;
+using Newtonsoft.Json.Serialization;
 
 namespace MasterChef.Api
 {
@@ -33,7 +34,8 @@ namespace MasterChef.Api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc();
+            services.AddMvc()
+            .AddJsonOptions(options => options.SerializerSettings.ContractResolver = new DefaultContractResolver());
 
             services.Add(ServiceDescriptor.Scoped(typeof(DbContext), typeof(MasterChefContext)));
             services.Add(ServiceDescriptor.Scoped(typeof(IGenericRepository<,>), typeof(GenericRepository<,>)));

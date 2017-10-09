@@ -9,14 +9,14 @@ import { UsuarioService } from '../../services/usuarioService';
 })
 export class UsuarioComponent implements OnInit {
 
-    usuarios: Usuario[];
+    usuarios: any[];
 
     constructor(private UsuarioService: UsuarioService) { }
 
     ngOnInit() {
 
         this.UsuarioService.get('Usuario').subscribe(result => {
-            this.usuarios = result.data;
+            this.usuarios = result;
         });
     }
 }
