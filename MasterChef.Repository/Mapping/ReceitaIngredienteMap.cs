@@ -20,7 +20,11 @@ namespace MasterChef.Repository.Mapping
                 entity.Property(e => e.ReceitaID).IsRequired();
                 entity.Property(e => e.Ativo).IsRequired();
                 entity.Property(e => e.Quantidade).IsRequired();
-                entity.Property(e => e.Item).IsRequired();
+                entity.Property(e => e.IngredienteID).IsRequired();
+                
+                entity.HasOne(e => e.Receita).WithMany(e => e.Ingredientes).HasForeignKey(e => e.ReceitaID);
+                entity.HasOne(e => e.Ingrediente).WithMany(e => e.Ingredientes).HasForeignKey(e => e.IngredienteID);
+
             });
         }
     }

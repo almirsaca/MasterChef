@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace MasterChef.Domain.Repository
+namespace MasterChef.Domain.Interfaces
 {
     public interface IUsuarioRepository : IGenericRepository<Usuario, int>
     {

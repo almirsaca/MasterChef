@@ -2,6 +2,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { AutorComponent } from "./pages/autor/autor.component";
 import { UsuarioComponent } from "./pages/usuario/usuario.component";
+import { CategoriaComponent } from "./pages/categoria/categoria.component";
 
 export const appRoutes = [
     {
@@ -31,6 +32,6 @@ export const appRoutes = [
     },
     {
         path: 'categoria',
-        component: UsuarioComponent
+        component: CategoriaComponent
     }
 ];

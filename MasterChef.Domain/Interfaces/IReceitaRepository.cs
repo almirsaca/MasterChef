@@ -1,6 +1,6 @@
 ﻿using MasterChef.Domain.Entities;
 
-namespace MasterChef.Domain.Repository
+namespace MasterChef.Domain.Interfaces
 {
     public interface IReceitaRepository : IGenericRepository<Receita, int>
     {

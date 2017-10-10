@@ -9,7 +9,7 @@ namespace MasterChef.Domain.Entities
     public class ReceitaCategoria : EntityBase
     {
         public int ReceitaCategoriaID { get; set; }
-        public string Descricao { get; set; }
+        public string Nome { get; set; }
 
         public IEnumerable<Receita> Receitas { get; set; }
 
@@ -28,7 +28,7 @@ namespace MasterChef.Domain.Entities
 
         private void AlterarDescricao(string descricao)
         {
-            Descricao = descricao;
+            Nome = descricao;
         }
 
         private void AlterarCategoriaId(int receitaCategoriaID)

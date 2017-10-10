@@ -12,6 +12,7 @@ import { HomeComponent } from "./pages/home/home.component";
 import { LoginComponent } from "./pages/login/login.component";
 import { AutorComponent } from "./pages/autor/autor.component";
 import { UsuarioComponent } from "./pages/usuario/usuario.component";
+import { CategoriaComponent } from "./pages/categoria/categoria.component";
 
 /* Services */
 import { HttpClient, } from './services/httpClient';
@@ -19,6 +20,7 @@ import { AuthenticationService, } from './services/authenticationService';
 import { BaseService } from './services/baseService';
 import { UsuarioService } from './services/usuarioService';
 import { AutorService } from './services/autorService';
+import { CategoriaService } from './services/categoriaService';
 
 @NgModule({
     declarations: [
@@ -28,7 +30,8 @@ import { AutorService } from './services/autorService';
         HomeComponent,
         LoginComponent,
         AutorComponent,
-        UsuarioComponent
+        UsuarioComponent,
+        CategoriaComponent
     ],
     imports: [
         HttpModule,
@@ -41,7 +44,8 @@ import { AutorService } from './services/autorService';
         AuthenticationService,
         BaseService,
         UsuarioService,
-        AutorService
+        AutorService,
+        CategoriaService
     ],
     bootstrap: [AppComponent]
 })
