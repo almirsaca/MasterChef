@@ -7,4 +7,5 @@ export class UsuarioService extends BaseService {
     constructor() {
         super()
     }
+
 }
