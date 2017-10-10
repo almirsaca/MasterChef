@@ -28,5 +28,9 @@ export const appRoutes = [
     {
         path: 'usuario',
         component: UsuarioComponent
+    },
+    {
+        path: 'categoria',
+        component: UsuarioComponent
     }
 ];
