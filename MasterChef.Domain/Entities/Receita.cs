@@ -14,6 +14,7 @@ namespace MasterChef.Domain.Entities
 
         public ReceitaCategoria ReceitaCategoria { get; set; }
         public ReceitaAutor ReceitaAutor { get; set; }
+        public IEnumerable<ReceitaIngrediente> Ingredientes { get; set; }
 
         protected Receita() { }
         

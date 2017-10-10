@@ -1,5 +1,5 @@
 ﻿using MasterChef.Domain.Entities;
-using MasterChef.Domain.Repository;
+using MasterChef.Domain.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;

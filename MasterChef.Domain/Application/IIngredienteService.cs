@@ -1,4 +1,6 @@
-﻿namespace MasterChef.Domain.Application
+﻿using MasterChef.Domain.Entities;
+
+namespace MasterChef.Domain.Application
 {
     public interface IIngredienteService
     {

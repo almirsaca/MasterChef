@@ -2,7 +2,6 @@
 using MasterChef.Domain.Application;
 using MasterChef.Domain.Entities;
 using MasterChef.Domain.Interfaces;
-using MasterChef.Domain.Repository;
 using System;
 using System.Linq;
 
@@ -47,6 +46,5 @@ namespace MasterChef.Application
 
             return receita;
         }
-
     }
 }

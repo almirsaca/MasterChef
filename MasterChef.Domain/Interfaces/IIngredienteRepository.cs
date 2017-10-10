@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MasterChef.Domain.Interfaces
 {
-    public interface IIngredienteRepository : IGenericRepository<ReceitaIngrediente, int>
+    public interface IIngredienteRepository : IGenericRepository<Ingrediente, int>
     {
     }
 }

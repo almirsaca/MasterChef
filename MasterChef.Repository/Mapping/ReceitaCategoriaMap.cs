@@ -18,7 +18,7 @@ namespace MasterChef.Repository.Mapping
                 entity.Property(e => e.ReceitaCategoriaID).IsRequired().ValueGeneratedOnAdd();
 
                 entity.Property(e => e.Ativo).IsRequired();
-                entity.Property(e => e.Descricao).HasMaxLength(256).IsRequired();
+                entity.Property(e => e.Nome).HasMaxLength(256).IsRequired();
 
             });
         }

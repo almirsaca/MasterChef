@@ -1,4 +1,10 @@
-﻿namespace MasterChef.Application
+﻿using MasterChef.Domain;
+using MasterChef.Domain.Application;
+using MasterChef.Domain.Entities;
+using MasterChef.Domain.Interfaces;
+using System.Linq;
+
+namespace MasterChef.Application
 {
     public class IngredienteService : IIngredienteService
     {
@@ -12,7 +18,7 @@
             UnitOfWork = unitOfWork;
         }
 
-        public IPaginatedList<Receita> GetPaginated(int pageIndex, int pageSize)
+        public IPaginatedList<Ingrediente> GetPaginated(int pageIndex, int pageSize)
         {
             var filtro = Repository.GetAll().Where(p => p.Ativo);
 
@@ -26,7 +32,7 @@
 
         public Ingrediente Salvar(Ingrediente ingrediente)
         {
-            if (Ingrediente.IngredienteID == 0)
+            if (ingrediente.IngredienteID == 0)
             {
                 Repository.Add(ingrediente);
             }

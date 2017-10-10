@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
-using MasterChef.Domain.Repository;
+using MasterChef.Domain.Interfaces;
 
 namespace MasterChef.Repository.Repository
 {

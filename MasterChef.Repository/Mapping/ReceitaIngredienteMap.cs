@@ -6,7 +6,7 @@ using System.Text;
 
 namespace MasterChef.Repository.Mapping
 {
-    public class ReceitaIngredienteMap
+    public static class ReceitaIngredienteMap
     {
         public static void OnCreateTable(ref ModelBuilder modelBuilder)
         {
@@ -24,7 +24,6 @@ namespace MasterChef.Repository.Mapping
                 
                 entity.HasOne(e => e.Receita).WithMany(e => e.Ingredientes).HasForeignKey(e => e.ReceitaID);
                 entity.HasOne(e => e.Ingrediente).WithMany(e => e.Ingredientes).HasForeignKey(e => e.IngredienteID);
-
             });
         }
     }
