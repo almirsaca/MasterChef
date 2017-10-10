@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
-import {smoothlyMenu} from "../../app.helpers";
+import { smoothlyMenu } from "../../app.helpers";
+import { Router } from '@angular/router';
+import { AppModule } from "../../app.module";
 
 @Component({
     selector: 'topnavbar',
     templateUrl: 'topnavbar.component.html'
 })
 export class Topnavbar {
+    _router: Router;
+
+    constructor() {
+        this._router = AppModule.injector.get(Router);
+    }
+
     ngOnInit() {
 
     }
@@ -15,6 +23,6 @@ export class Topnavbar {
     }
     logout() {
         localStorage.clear();
-        // location.href='http://to_login_page';
+        this._router.navigate(['/login']);
     }
 }

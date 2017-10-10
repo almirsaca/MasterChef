@@ -1,4 +1,4 @@
-import { Injectable,Component, OnInit } from '@angular/core';
+import { Injectable, Component, OnInit } from '@angular/core';
 import { Usuario } from "../../models/usuario";
 import { UsuarioService } from '../../services/usuarioService';
 
@@ -10,12 +10,16 @@ import { UsuarioService } from '../../services/usuarioService';
 export class UsuarioComponent implements OnInit {
 
     usuarios: any[];
+    filtro: any = {};
 
     constructor(private UsuarioService: UsuarioService) { }
 
     ngOnInit() {
+        this.listar();
+    }
 
-        this.UsuarioService.get('Usuario').subscribe(result => {
+    listar() {
+        this.UsuarioService.getFiltro('Usuario', this.filtro || {}, 1, 20).subscribe(result => {
             this.usuarios = result;
         });
     }

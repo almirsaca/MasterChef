@@ -19,17 +19,17 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Nome</label>
-                  <input type="text" class="form-control" id="nome" placeholder="Nome">
+                  <label>Nome</label>
+                  <input type="text" class="form-control" id="filtro.Nome" name="filtro.Nome" placeholder="Nome"  [(ngModel)]="filtro.Nome">
                 </div>
               </div>
             </div>
             <div class="row">
               <div class="col-lg-6">
-                <button type="submit" class="btn btn-success pull-left">Pesquisar</button>
+                <button type="button" (click)="listar()" class="btn btn-success pull-left">Pesquisar</button>
               </div>
               <div class="col-lg-6">
-                <button type="submit" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModalLong">Novo</button>
+                <button type="button" class="btn btn-primary pull-right" data-toggle="modal" data-target="#exampleModalLong">Novo</button>
               </div>
             </div>
           </form>
@@ -47,10 +47,7 @@
         <h5>Listagem de usuários</h5>
       </div>
       <div class="ibox-content">
-
         <div class="row">
-
-
           <table class="table table-hover margin bottom">
             <thead>
               <tr>
@@ -68,15 +65,8 @@
               </tr>
             </tbody>
           </table>
-
         </div>
       </div>
     </div>
   </div>
-
-
-
-
-
-
 </div>

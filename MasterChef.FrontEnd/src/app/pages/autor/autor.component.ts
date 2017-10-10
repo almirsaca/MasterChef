@@ -11,17 +11,19 @@ import { AutorService } from '../../services/autorService';
 })
 export class AutorComponent implements OnInit {
 
-    autores: Autor[];
+    autores: any[];
+    filtro: any = {};
 
     constructor(private AutorService: AutorService) { }
 
     ngOnInit() {
+        this.listar();
+    }
 
-        this.AutorService.get('Autor').subscribe(result => {
-            this.autores = result.data;
+    listar() {
+        this.AutorService.getFiltro('Autor', this.filtro || {}, 1, 20).subscribe(result => {
+            this.autores = result;
         });
-
-
     }
 
 }

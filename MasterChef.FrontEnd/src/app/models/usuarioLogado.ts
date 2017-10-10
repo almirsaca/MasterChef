@@ -3,6 +3,4 @@
  */
 export class UsuarioLogado {
     Nome: string;
-    Email: string;
-    Avatar: string;
 }
